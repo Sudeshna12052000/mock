@@ -1,0 +1,25 @@
+.crop-img{
+  max-height:150px;
+  max-width:100%;
+  margin-bottom: 10px;
+
+}
+
+.large-img{
+  max-width:100%;
+  margin-top: 10px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.text{
+	text-align: center;
+	font-size: 500%;
+}
+.home{
+	text-align: right;
+	font-size: 200%;
+}

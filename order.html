@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<title><OBJECT>Order</OBJECT></title>
+
+		
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="bootstrap.css"
+		      />
+
+		
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="styles.css"
+		      />	
+
+		
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+		
+		<a 
+		href="home.html" class="home">
+			Go Back
+		</a>
+		 &nbsp;
+		<a 
+		href="order.html" class="home">
+			Order 
+		</a>
+		&nbsp;
+		<a 
+		href="cart.html"  class="home">
+			Cart
+		</a>
+
+		</hr>
+	<div class="container">
+<div class="text"
+		<h1>Recommended</h1>
+	</div>
+&nbsp;
+		
+		<div class="row">
+			<div class="col-md-3">
+				<img id="image1"class="crop-img" 
+				  src="bms1.jpeg"  
+				  alt="PaniPuri"/> 
+				  <p>PaniPuri</p>
+			</div>
+			<div class="col-md-3">
+				<img id="image2"class="crop-img" 
+				  src="bms2.jpeg" 
+				  alt="Pizza"/>
+				  <p>Pizza</p> 
+			</div>
+			<div class="col-md-3">
+				<img id="image3" class="crop-img" 
+				  src="bms3.jpeg" 
+				  alt="tofu"/> 
+				  <p>Tofu Paneer</p>
+			</div>
+			<div class="col-md-3">
+				<img id="image4" class="crop-img" 
+				   src="bms4.jpeg" 
+				   alt="bmsspecial"/> 
+				   <p>BMS Special</p>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-3">
+				<button id="backward">&lt;</button>
+			</div>
+			
+
+		
+		
+			<div class="col-md-3">
+				<img id="bigImage"
+				  class="large-img" 
+				  src="bms1.jpeg" 
+				  alt="big"> 
+			</div>
+
+
+
+
+			<div class="col-md-3">
+
+				<button id="forward">&gt;</button>
+		</div>
+			
+
+	</div>
+	
+
+	<script>
+		    var paused= false;
+		    $(".crop-img").click(function(){
+		    	$("#bigImage").attr('src',
+		    		$(this).attr('src'));
+		    });
+		    var counter =1;
+		    $("#image"+counter).click();
+
+		    $("#backward").click(function(){
+		    	counter=counter-1;
+		    	if(counter <1){
+		    		counter=4;
+		    	}
+		    	$("#image"+counter).click();
+
+		    });
+
+		    $("#forward").click(function(){
+		    	counter=counter+1;
+		    	if(counter>4){
+		    		counter=1;
+		    	}
+		    	$("#image"+counter).click();
+
+		    });
+		    $("#bigimage").click(function(){
+		    	paused = !paused;
+		    });
+
+
+		    setInterval(function(){
+		    	if(!paused){
+		    		$("#forward").click();
+		    	};
+		    },3000);
+		    
+
+		    
+	</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
